@@ -18,6 +18,9 @@ func main() {
 		input, _ := reader.ReadString('\n')
 		//input = strings.Replace(input, " ", "", -1)
 		input = strings.TrimSpace(input)
+		if input == "0" {
+			break
+		}
 		result := EvalArabic(input)
 		fmt.Printf("The result is: %v\n", result)
 	}
